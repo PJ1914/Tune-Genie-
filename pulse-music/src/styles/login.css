@@ -1,0 +1,101 @@
+.login-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f0f0f, #1e1e1e, #2e2e2e);
+    background-size: 400% 400%;
+    animation: gradientFlow 12s ease infinite;
+    font-family: 'Segoe UI', sans-serif;
+    overflow: hidden;
+  }
+  
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .login-form {
+    background-color: rgba(31, 31, 31, 0.95);
+    padding: 3rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    animation: fadeInScale 1.2s ease forwards;
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  
+  @keyframes fadeInScale {
+    to {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .login-form h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+    color: #f5f5f5;
+  }
+  
+  .login-form input {
+    padding: 12px;
+    margin-bottom: 1rem;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    background-color: #2b2b2b;
+    color: white;
+    outline: none;
+    transition: all 0.3s ease;
+  }
+  
+  .login-form input::placeholder {
+    color: #888;
+  }
+  
+  .login-form input:focus {
+    box-shadow: 0 0 8px #1db954aa;
+    background-color: #333;
+  }
+  
+  .login-form button {
+    padding: 12px;
+    background-color: #1db954;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(29, 185, 84, 0.3);
+  }
+  
+  .login-form button:hover {
+    background-color: #17a44b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(29, 185, 84, 0.5);
+  }
+  
+  .signup-text {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.9rem;
+    color: #ccc;
+  }
+  
+  .signup-text a {
+    color: #1db954;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+  
+  .signup-text a:hover {
+    color: #1ed760;
+  }
+  

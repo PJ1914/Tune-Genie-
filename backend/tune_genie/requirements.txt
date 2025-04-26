@@ -1,0 +1,7 @@
+torch>=2.0.0
+numpy>=1.23.0
+soundfile>=0.12.1
+audiocraft>=1.0.0
+pymongo>=4.3.3
+python-dotenv>=1.0.0
+google-generativeai>=0.3.0

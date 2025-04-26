@@ -1,0 +1,126 @@
+.playlists-page {
+  padding: 2rem;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+}
+
+.playlists-header {
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  margin-bottom: 2rem;
+  box-shadow: var(--shadow);
+}
+
+.playlists-header h1 {
+  font-size: var(--font-3xl);
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+  background: var(--gradient-primary);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.playlists-filters {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: var(--border-radius);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-size: var(--font-md);
+  transition: var(--transition-fast);
+  flex: 1;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(29, 185, 84, 0.2);
+}
+
+.playlists-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 1rem;
+}
+
+.playlist-card {
+  background-color: var(--bg-secondary);
+  border-radius: var(--border-radius);
+  overflow: hidden;
+  transition: var(--transition-normal);
+  text-decoration: none;
+  color: var(--text-primary);
+  box-shadow: var(--shadow);
+}
+
+.playlist-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.playlist-cover {
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
+}
+
+.playlist-cover img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition-normal);
+}
+
+.playlist-card:hover .playlist-cover img {
+  transform: scale(1.05);
+}
+
+.playlist-info {
+  padding: 1.5rem;
+}
+
+.playlist-info h3 {
+  font-size: var(--font-xl);
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.playlist-description {
+  color: var(--text-secondary);
+  font-size: var(--font-sm);
+  margin-bottom: 1rem;
+}
+
+.playlist-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--text-tertiary);
+  font-size: var(--font-xs);
+}
+
+@media (max-width: 768px) {
+  .playlists-page {
+    padding: 1rem;
+  }
+
+  .playlists-header {
+    padding: 1rem;
+  }
+
+  .playlists-grid {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+  }
+} 
